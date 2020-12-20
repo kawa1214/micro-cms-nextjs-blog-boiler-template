@@ -1,23 +1,23 @@
 import React from 'react'
 import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next'
 
-import Link from 'next/link';
 
 import Head from 'next/head'
 import { BlogType, TagType } from './types'
 
+import { BlogCard } from './components/blogcard' 
+
+type HomeProps = {
+  blogs: Array<BlogType>
+}
  
-const Home = ({blogs}) => {
+const Home: React.FC<HomeProps> = ({blogs}) => {
   return (
-    <>
+    <div className="bg-gray-100 px-2 md:px-14">
       {blogs.map(blog => (
-        <React.Fragment key={blog.id}>
-          <Link href={`/blogs/${blog.id}`}>
-            <a>{blog.title}</a>
-          </Link>
-        </React.Fragment>
+        <BlogCard blog={blog} key={blog.id}/>
       ))}
-    </>
+    </div>
   )
 }
 
@@ -33,7 +33,6 @@ export const getStaticProps: GetStaticProps = async () => {
 
   const data = await res.json();
   const blogs: Array<BlogType> = data.contents
-
   return {
     props: {
       blogs: blogs,
