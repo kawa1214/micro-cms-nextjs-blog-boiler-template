@@ -4,6 +4,7 @@
 - ✏️ Syntax Highlighting
 - 🦊 SEO friendly
 - 🎨 Integrate with Tailwind CSS
+- 🤖 GoogleAnalytics
 
 ### 🚀 Upcoming Features
 - [ ] Pagination
