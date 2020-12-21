@@ -31,3 +31,4 @@ export const footerText: string = "© 2020 title"
 
 ### License
 Licensed under the MIT License, Copyright © 2020
+See [LICENSE](https://github.com/kawa1214/micro-cms-nextjs-blog-boiler-template/blob/main/LICENSE) for more information.
