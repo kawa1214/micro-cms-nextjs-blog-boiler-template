@@ -15,7 +15,7 @@ const Home: React.FC<HomeProps> = ({blogs}) => {
       {blogs.map(blog => (
         <BlogCard blog={blog} key={blog.id}/>
       ))}
-      <Link href="pages/1">
+      <Link href="/">
         <a className="text-gray-500 pr-4">
           &lt;&lt;
         </a>
