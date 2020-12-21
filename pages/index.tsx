@@ -1,10 +1,7 @@
 import React from 'react'
-import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next'
+import { GetStaticProps } from 'next'
 
-
-import Head from 'next/head'
-import { BlogType, TagType } from './types'
-
+import { BlogType} from './types'
 import { BlogCard } from './components/BlogCard'
 
 type HomeProps = {
