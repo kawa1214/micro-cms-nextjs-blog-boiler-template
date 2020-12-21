@@ -5,9 +5,9 @@
 - 🦊 SEO friendly
 - 🎨 Integrate with Tailwind CSS
 - 🤖 GoogleAnalytics
+- 📖 Pagination
 
 ### 🚀 Upcoming Features
-- [ ] Pagination
 - [ ] Tag Page
 - [ ] Scrollable table of contents
 - [ ] Featured image

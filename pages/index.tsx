@@ -20,8 +20,8 @@ const Home: React.FC<HomeProps> = ({blogs}) => {
           &lt;&lt;
         </a>
       </Link>
-      <Link href="pages/1">
-        <a className="text-black">
+      <Link href={`/pages/${(blogs.length <= 9) ? 0 : 1}`}>
+        <a className={`${(blogs.length <= 9) ? "text-gray-500" : "text-black"}`}>
           &gt;&gt;
         </a>
       </Link>

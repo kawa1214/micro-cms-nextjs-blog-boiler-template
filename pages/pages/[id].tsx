@@ -27,8 +27,8 @@ const Pages: React.FC<PagesProps> = ({blogs, page}) => {
       {blogs.map(blog => (
         <BlogCard blog={blog} key={blog.id}/>
       ))}
-      <Link href={`/pages/${page-1}`}>
-        <a className="text-black pr-4">
+      <Link href={(page==0) ? '/pages/0' : `/pages/${page-1}` }>
+        <a className={`${(page == 0) ? "text-gray-500" : "text-black"} pr-4`}>
           &lt;&lt;
         </a>
       </Link>
