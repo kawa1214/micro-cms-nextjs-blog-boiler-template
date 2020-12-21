@@ -4,6 +4,8 @@ import { BlogType } from '../../types'
 import Moment from 'react-moment';
 import BlogContent from '../../components/BlogContent';
 import Head from 'next/head'
+import { useRouter } from 'next/router'
+
 
 import { title } from '../../static/general'
 import { GA_TRACKING_ID } from '../../utils/tag'
@@ -13,6 +15,10 @@ type BlogProps = {
 }
 
 const Blog: React.FC<BlogProps> = ({ blog }) => {
+  const router = useRouter()
+  if (router.isFallback) {
+    return <div>Loading...</div>
+  }
   return (
     <>
     <Head>
@@ -61,7 +67,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const repos = await res.json();
   const paths = repos.contents.map(repo => `/blogs/${repo.id}`);
 
-  return { paths, fallback: false };
+  return { paths, fallback: true };
 };
 
 export const getStaticProps: GetStaticProps = async context => {  

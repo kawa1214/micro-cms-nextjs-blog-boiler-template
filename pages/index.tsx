@@ -3,6 +3,7 @@ import { GetStaticProps } from 'next'
 
 import { BlogType } from '../types'
 import BlogCard from '../components/BlogCard'
+import Link from 'next/link'
 
 type HomeProps = {
   blogs: Array<BlogType>
@@ -14,6 +15,16 @@ const Home: React.FC<HomeProps> = ({blogs}) => {
       {blogs.map(blog => (
         <BlogCard blog={blog} key={blog.id}/>
       ))}
+      <Link href="pages/1">
+        <a className="text-gray-500 pr-4">
+          &lt;&lt;
+        </a>
+      </Link>
+      <Link href="pages/1">
+        <a className="text-black">
+          &gt;&gt;
+        </a>
+      </Link>
     </div>
   )
 }
