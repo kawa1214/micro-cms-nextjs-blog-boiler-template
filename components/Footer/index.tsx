@@ -1,7 +1,7 @@
 import Link from 'next/link'
-import { footerText } from '../../../static/general'
+import { footerText } from '../../static/general'
 
-export const Footer = () => {
+const Footer = () => {
   return(
     <div className="h-12 bg-white px-2 md:px-14">
       <div className="h-12 flex items-stretch">        
@@ -14,3 +14,5 @@ export const Footer = () => {
     </div>
   )
 }
+
+export default Footer

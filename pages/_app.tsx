@@ -4,8 +4,8 @@ import { useEffect } from 'react'
 import '../styles/globals.css'
 import '../styles/blog_content.css'
 
-import { Header } from './components/Header'
-import { Footer } from './components/Footer'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 import { GA_TRACKING_ID, pageview } from '../utils/tag'
 

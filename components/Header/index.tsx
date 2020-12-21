@@ -1,7 +1,7 @@
 import Link from 'next/link'
-import { title, githubLink } from '../../../static/general'
+import { title, githubLink } from '../../static/general'
 
-export const Header = () => {
+const Header = () => {
   return(
     <div className="h-12 bg-white px-2 md:px-14">
       <div className="h-12 flex items-stretch justify-between">        
@@ -24,3 +24,4 @@ export const Header = () => {
     </div>
   )
 }
+export default Header

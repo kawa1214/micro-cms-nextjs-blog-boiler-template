@@ -1,12 +1,12 @@
 import React from 'react'
 import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next'
-import { BlogType } from '../types'
+import { BlogType } from '../../types'
 import Moment from 'react-moment';
-import { BlogContent } from '../components/BlogContent';
+import BlogContent from '../../components/BlogContent';
 import Head from 'next/head'
 
 import { title } from '../../static/general'
-import { GA_TRACKING_ID, pageview } from '../../utils/tag'
+import { GA_TRACKING_ID } from '../../utils/tag'
 
 type BlogProps = {
   blog: BlogType

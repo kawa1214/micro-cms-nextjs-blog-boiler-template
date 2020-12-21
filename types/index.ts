@@ -1,4 +1,13 @@
-export type BlogType = {
+type TagType = {
+  id: string
+  name: string
+  createdAt: Date
+  updatedAt: Date
+  publishedAt: Date
+  revisedAt: Date
+}
+
+type BlogType = {
   id: string
   title: string
   body: string
@@ -9,11 +18,4 @@ export type BlogType = {
   revisedAt: Date
 }
 
-export type TagType = {
-  id: string
-  name: string
-  createdAt: Date
-  updatedAt: Date
-  publishedAt: Date
-  revisedAt: Date
-}
+export type {BlogType, TagType}

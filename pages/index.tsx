@@ -1,8 +1,8 @@
 import React from 'react'
 import { GetStaticProps } from 'next'
 
-import { BlogType} from './types'
-import { BlogCard } from './components/BlogCard'
+import { BlogType } from '../types'
+import BlogCard from '../components/BlogCard'
 
 type HomeProps = {
   blogs: Array<BlogType>
