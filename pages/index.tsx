@@ -5,7 +5,7 @@ import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next'
 import Head from 'next/head'
 import { BlogType, TagType } from './types'
 
-import { BlogCard } from './components/blogcard' 
+import { BlogCard } from './components/BlogCard'
 
 type HomeProps = {
   blogs: Array<BlogType>

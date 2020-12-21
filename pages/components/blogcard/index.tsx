@@ -20,11 +20,12 @@ export const BlogCard: React.FC<BlogCardProps> = ({ blog }) => {
       <Link href={`/blogs/${blog.id}`}>
         <a className="text-lg font-semibold">{blog.title}</a>
       </Link>
-
-      <div className="text-sm text-gray-700 py-1.5">
-        <Moment format="YYYY-MM-DD" className="pr-5">{blog.createdAt}</Moment>
+      <div className="text-sm py-1.5">
+        <Moment format="YYYY-MM-DD" className="text-gray-700 pr-3 font-semibold">{blog.createdAt}</Moment>
         {blog.tags.map(tag => (
-          <a key={tag.id} className="pr-2">{tag.name}</a>
+          <div className="inline-flex bg-white mr-2 px-1.5 rounded-md" key={tag.id}>
+            <a className="flex-1 text-gray-700 font-semibold">{tag.name}</a>
+          </div>
         ))}
       </div>
       <div

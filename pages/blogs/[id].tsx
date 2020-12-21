@@ -1,7 +1,8 @@
 import React from 'react'
 import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next'
-import { BlogType, TagType } from '../types'
+import { BlogType } from '../types'
 import Moment from 'react-moment';
+import { BlogContent } from '../components/BlogContent';
 
 type BlogProps = {
   blog: BlogType
@@ -19,17 +20,7 @@ const Blog: React.FC<BlogProps> = ({ blog }) => {
           </div>
         ))}
       </div>
-      <div className="bg-white rounded-sm">
-        <div className="rounded-sm grid h-48 md:h-128 bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500">
-          <p className="px-4 md:px-12 place-self-center font-bold text-3xl text-white">{blog.title}</p>
-        </div>
-        <div
-          className="text-black py-6 px-4"
-          dangerouslySetInnerHTML={{
-            __html: blog.body,
-          }}
-        />
-      </div>
+      <BlogContent blog={blog} />
     </div>
   );
 };
@@ -56,7 +47,6 @@ export const getStaticProps: GetStaticProps = async context => {
 
   const res = await fetch(process.env.ENDPOINT + '/blogs/' + id, key);
   const blog: BlogType  = await res.json();
-
   return {
     props: {
       blog: blog,
