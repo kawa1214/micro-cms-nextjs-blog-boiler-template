@@ -15,16 +15,6 @@ const Home: React.FC<HomeProps> = ({blogs}) => {
       {blogs.map(blog => (
         <BlogCard blog={blog} key={blog.id}/>
       ))}
-      <Link href="/">
-        <a className="text-gray-500 pr-4">
-          &lt;&lt;
-        </a>
-      </Link>
-      <Link href={`/pages/${(blogs.length <= 9) ? 0 : 1}`}>
-        <a className={`${(blogs.length <= 9) ? "text-gray-500" : "text-black"}`}>
-          &gt;&gt;
-        </a>
-      </Link>
     </div>
   )
 }
