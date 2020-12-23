@@ -14,7 +14,6 @@ const stripTags = (input: string, allowed: string) => {
   const tags = /<\/?([a-z][a-z0-9]*)\b[^>]*>/gi
   return input.replace(tags, ($0, $1) => (allowed.indexOf('<' + $1.toLowerCase() + '>') > -1 ? $0 : ''))
 }
-///         <a><Image className={`object-fill rounded-lg transition duration-500 ease-in-out md:transform hover:scale-105`} width={500} height={500} src={blog.featured.url}/></a>
 
 export const BlogCard: React.FC<BlogCardProps> = ({ blog }) => {
   return(
