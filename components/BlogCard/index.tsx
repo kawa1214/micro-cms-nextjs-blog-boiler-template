@@ -18,7 +18,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({ blog }) => {
   return(
     <div className="py-4">
       <Link href={`/blogs/${blog.id}`}>
-        <a><img className={`object-fill rounded-lg border-2 border-transparent hover:border-yellow-500`} src={blog.featured.url}/></a>
+        <a><img className={`object-fill rounded-lg transition duration-500 ease-in-out transform hover:scale-105`} src={blog.featured.url}/></a>
       </Link>
       <div className="text-sm py-1.5 md:py-4">
         {blog.tags.map(tag => (
