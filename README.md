@@ -6,6 +6,8 @@
 - 🎨 Integrate with Tailwind CSS
 - 🤖 GoogleAnalytics
 - 📖 Pagination
+- 🖼 Featured image
+
 
 ### 🚀 Upcoming Features
 - [ ] Tag Page

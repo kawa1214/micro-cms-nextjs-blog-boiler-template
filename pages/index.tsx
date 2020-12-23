@@ -2,7 +2,7 @@ import React from 'react'
 import { GetStaticProps } from 'next'
 
 import { BlogType } from '../types'
-import BlogCard from '../components/BlogCard'
+import { BlogCard } from '../components/BlogCard'
 import Link from 'next/link'
 
 type HomeProps = {
@@ -11,7 +11,7 @@ type HomeProps = {
  
 const Home: React.FC<HomeProps> = ({blogs}) => {
   return (
-    <div className="bg-gray-100 px-2 md:px-14">
+    <div className="bg-gray-50 md:grid md:grid-cols-3 md:gap-x-14 md:gap-y-8 px-4 md:px-40 py-2 md:py-16">
       {blogs.map(blog => (
         <BlogCard blog={blog} key={blog.id}/>
       ))}

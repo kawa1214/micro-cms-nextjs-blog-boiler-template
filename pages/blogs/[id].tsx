@@ -2,7 +2,7 @@ import React from 'react'
 import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next'
 import { BlogType } from '../../types'
 import Moment from 'react-moment';
-import BlogContent from '../../components/BlogContent';
+import { BlogContent } from '../../components/BlogContent';
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 

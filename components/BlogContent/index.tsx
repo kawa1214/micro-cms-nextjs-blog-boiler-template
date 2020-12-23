@@ -19,7 +19,7 @@ const highlightCode = (body: String) => {
 
 
 
-const BlogContent: React.FC<BlogContentProps> = ({ blog }) => {
+export const BlogContent: React.FC<BlogContentProps> = ({ blog }) => {
   return (
     <div className={"bg-white rounded-sm"}>
       <div className="rounded-sm grid h-auto w-auto px-4 md:px-12 py-16 md:py-20 bg-gradient-to-r from-yellow-400 via-red-500 to-pink-500">
@@ -35,5 +35,3 @@ const BlogContent: React.FC<BlogContentProps> = ({ blog }) => {
     </div>
   )
 }
-
-export default BlogContent

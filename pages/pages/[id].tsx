@@ -2,14 +2,14 @@ import React from 'react'
 import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next'
 import { BlogType } from '../../types'
 import Moment from 'react-moment';
-import BlogContent from '../../components/BlogContent';
+import { BlogContent } from '../../components/BlogContent';
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 
 
 import { title } from '../../static/general'
 import { GA_TRACKING_ID } from '../../utils/tag'
-import BlogCard from '../../components/BlogCard';
+import { BlogCard } from '../../components/BlogCard';
 import Link from 'next/link';
 
 type PagesProps = {
