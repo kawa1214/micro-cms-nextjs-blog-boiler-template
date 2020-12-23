@@ -1,5 +1,6 @@
 import React, {Fragment} from 'react'
 import Link from 'next/link';
+import Image from 'next/image'
 
 import Moment from 'react-moment';
 
@@ -13,12 +14,13 @@ const stripTags = (input: string, allowed: string) => {
   const tags = /<\/?([a-z][a-z0-9]*)\b[^>]*>/gi
   return input.replace(tags, ($0, $1) => (allowed.indexOf('<' + $1.toLowerCase() + '>') > -1 ? $0 : ''))
 }
+///         <a><Image className={`object-fill rounded-lg transition duration-500 ease-in-out md:transform hover:scale-105`} width={500} height={500} src={blog.featured.url}/></a>
 
 export const BlogCard: React.FC<BlogCardProps> = ({ blog }) => {
   return(
     <div className="py-4">
       <Link href={`/blogs/${blog.id}`}>
-        <a><img className={`object-fill rounded-lg transition duration-500 ease-in-out md:transform hover:scale-105`} src={blog.featured.url}/></a>
+        <a><Image className={`object-fill rounded-lg transition duration-500 ease-in-out md:transform hover:scale-105`} width={960} height={530} src={blog.featured.url}/></a>
       </Link>
       <div className="text-sm py-1.5 md:py-4">
         {blog.tags.map(tag => (
