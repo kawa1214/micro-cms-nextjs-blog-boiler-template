@@ -9,7 +9,7 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang={lang}>
+      <Html lang="ja" data-react-helmet="lang">
         <Head />
         <body>
           <Main />
