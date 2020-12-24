@@ -43,8 +43,8 @@ const Blog: React.FC<BlogProps> = ({ blog, title }) => {
       <div className="text-sm py-1.5">
         <Moment format="YYYY-MM-DD" className="text-gray-700 pr-3 font-semibold">{blog.createdAt}</Moment>
         {blog.tags.map(tag => (
-          <div className="inline-flex bg-white mr-2 px-1.5 rounded-md" key={tag.id}>
-            <a className="flex-1 text-gray-700 font-semibold">{tag.name}</a>
+          <div className="inline-flex bg-gray-800 mr-2 px-1.5 rounded-md" key={tag.id}>
+            <a className="flex-1 text-white font-semibold">{tag.name}</a>
           </div>
         ))}
       </div>
