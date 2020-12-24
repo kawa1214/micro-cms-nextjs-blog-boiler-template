@@ -38,7 +38,7 @@ const Blog: React.FC<BlogProps> = ({ blog, title }) => {
         }}
       />
     </Head>
-    <div className="bg-gray-100 py-4 px-2 md:px-14">
+    <div className="py-4 px-2 md:px-14">
       <p className="text-2xl font-semibold">{blog.title}</p>
       <div className="text-sm py-1.5">
         <Moment format="YYYY-MM-DD" className="text-gray-700 pr-3 font-semibold">{blog.createdAt}</Moment>
