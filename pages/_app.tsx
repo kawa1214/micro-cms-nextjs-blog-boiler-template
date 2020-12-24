@@ -45,6 +45,8 @@ function MyApp({ Component, pageProps }) {
             `,
           }}
         />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="Description" content="Web技術のアウトプットや日常的なことまで何でも書きます。Webアプリケーション開発のお仕事もお待ちしております！"></meta>
         </Head>
         <Header />
         <Component {...pageProps} />

@@ -13,17 +13,23 @@ export const BlogCard: React.FC<BlogCardProps> = ({ blog }) => {
   return(
     <div className="py-4">
       <Link href={`/blogs/${blog.id}`}>
-        <a><Image className={`object-fill rounded-lg transition duration-500 ease-in-out md:transform hover:scale-105`} width={960} height={530} src={blog.featured.url}/></a>
+        <a><Image
+          className={`object-fill rounded-lg transition duration-500 ease-in-out md:transform hover:scale-105`}
+          width={960}
+          height={530}
+          src={blog.featured.url}
+          alt={blog.title}
+        /></a>
       </Link>
       <div className="text-sm py-1.5 md:py-4">
         {blog.tags.map(tag => (
           <div className="inline-flex bg-gray-800 mr-2 px-1.5 rounded-md" key={tag.id}>
-            <a className="flex-1 text-white font-semibold">{tag.name}</a>
+            <h2 className="flex-1 text-white font-semibold">{tag.name}</h2>
           </div>
         ))}
       </div>
       <Link href={`/blogs/${blog.id}`}>
-        <a className="text-lg font-semibold">{blog.title}</a>
+        <a className="text-lg font-semibold"><h1>{blog.title}</h1></a>
       </Link>
       <div className="text-sm grid justify-items-end">
         <Moment format="YYYY-MM-DD" className="text-gray-700 pr-3 font-semibold">{blog.createdAt}</Moment>

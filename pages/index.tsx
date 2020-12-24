@@ -3,7 +3,6 @@ import { GetStaticProps } from 'next'
 
 import { BlogType } from '../types'
 import { BlogCard } from '../components/BlogCard'
-import Link from 'next/link'
 
 type HomeProps = {
   blogs: Array<BlogType>

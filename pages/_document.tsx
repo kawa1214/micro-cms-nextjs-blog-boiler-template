@@ -1,5 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
-import { lang} from '../static/general'
+import { lang } from '../static/general'
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -9,7 +9,7 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang="ja" data-react-helmet="lang">
+      <Html lang={lang}>
         <Head />
         <body>
           <Main />

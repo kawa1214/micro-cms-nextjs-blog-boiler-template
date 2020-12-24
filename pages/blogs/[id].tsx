@@ -39,12 +39,12 @@ const Blog: React.FC<BlogProps> = ({ blog, title }) => {
       />
     </Head>
     <div className="bg-gray-50 py-4 px-2 md:px-14">
-      <p className="text-2xl font-semibold">{blog.title}</p>
+      <p className="text-2xl font-semibold"><h1>{blog.title}</h1></p>
       <div className="text-sm py-1.5">
         <Moment format="YYYY-MM-DD" className="text-black pr-3 font-semibold">{blog.createdAt}</Moment>
         {blog.tags.map(tag => (
           <div className="inline-flex bg-gray-800 mr-2 px-1.5 rounded-md" key={tag.id}>
-            <a className="flex-1 text-white font-semibold">{tag.name}</a>
+            <a className="flex-1 text-white font-semibold"><h2>{tag.name}</h2></a>
           </div>
         ))}
       </div>
