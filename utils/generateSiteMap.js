@@ -17,6 +17,7 @@ async function generateSiteMap() {
         .map(page => {
           const path = page
             .replace('/index', '')
+            .replace('.next/serverless/pages', '')
             .replace('.next/server/pages', '')
             .replace('.html', '')
           return `
