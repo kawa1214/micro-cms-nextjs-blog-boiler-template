@@ -5,6 +5,14 @@
       </url>         
       
       <url>
+        <loc>https://kawa.dev/404</loc>
+      </url>
+              
+      <url>
+        <loc>https://kawa.dev</loc>
+      </url>
+              
+      <url>
         <loc>https://kawa.dev/blogs/flutter-markdown</loc>
       </url>
               
