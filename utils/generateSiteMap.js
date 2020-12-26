@@ -15,9 +15,7 @@ async function generateSiteMap() {
     //'!pages/**/[id].tsx',
     //'!pages/_*.tsx',
     //'out/blogs/*.html',
-    '.next/*',
-    '.next/**/',
-    '.next/**/**'
+    '.next/serverless/**/.html'
   ])
 
   console.log("testPage", testPage )
