@@ -1,29 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">   
       
-      <url>
-        <loc>https://kawa.dev/404</loc>
-      </url>
-              
-      <url>
-        <loc>https://kawa.dev</loc>
-      </url>
-              
-      <url>
-        <loc>https://kawa.dev/blogs/flutter-markdown</loc>
-      </url>
-              
-      <url>
-        <loc>https://kawa.dev/blogs/flutter-state-notifier-firestore</loc>
-      </url>
-              
-      <url>
-        <loc>https://kawa.dev/blogs/jest-axios-mock</loc>
-      </url>
-              
-      <url>
-        <loc>https://kawa.dev/blogs/learn-virtual-dom</loc>
-      </url>
-              
   </urlset>
   

@@ -12,7 +12,7 @@ type BlogType = {
   title: string
   body: string
   tags: Array<TagType>
-  createdAt: Date
+  createdAt: Date | string
   updatedAt: Date
   publishedAt: Date
   revisedAt: Date

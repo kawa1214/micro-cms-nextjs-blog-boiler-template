@@ -1,8 +1,6 @@
 import React, {Fragment} from 'react'
-import Link from 'next/link';
+import Link from 'next/link'
 import Image from 'next/image'
-
-import Moment from 'react-moment';
 
 import { BlogType } from '../../types'
 type BlogCardProps = {
@@ -32,7 +30,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({ blog }) => {
         <a className="text-lg font-semibold"><h1>{blog.title}</h1></a>
       </Link>
       <div className="text-sm grid justify-items-end">
-        <Moment format="YYYY-MM-DD" className="text-gray-700 pr-3 font-semibold">{blog.createdAt}</Moment>
+        <div className="text-gray-700 pr-3 font-semibold">{blog.createdAt}</div>
       </div>
     </div>
   )

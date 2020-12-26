@@ -4,6 +4,8 @@ import { GetStaticProps } from 'next'
 import { BlogType } from '../types'
 import { BlogCard } from '../components/BlogCard'
 
+import dayjs from 'dayjs'
+
 type HomeProps = {
   blogs: Array<BlogType>
 }
@@ -32,6 +34,10 @@ export const getStaticProps: GetStaticProps = async () => {
 
   const data = await res.json();
   const blogs: Array<BlogType> = data.contents
+  const fotmatDateBlogs: Array<BlogType> = blogs.map((blog) => {
+    blog.createdAt = dayjs(blog.createdAt).format('YYYY-MM-DD')
+    return blog
+  })
   return {
     props: {
       blogs: blogs,

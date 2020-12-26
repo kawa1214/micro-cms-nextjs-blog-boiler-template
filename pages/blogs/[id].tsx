@@ -1,7 +1,6 @@
 import React from 'react'
 import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next'
 import { BlogType } from '../../types'
-import Moment from 'react-moment';
 import { BlogContent } from '../../components/BlogContent';
 import Head from 'next/head'
 
@@ -9,6 +8,8 @@ import { title } from '../../static/general'
 import { GA_TRACKING_ID } from '../../utils/tag'
 import cheerio from 'cheerio';
 import hljs from 'highlight.js'
+import dayjs from 'dayjs'
+
 
 type BlogProps = {
   blog: BlogType
@@ -40,8 +41,8 @@ const Blog: React.FC<BlogProps> = ({ blog, title }) => {
     </Head>
     <div className="bg-gray-50 py-4 px-2 md:px-14">
       <p className="text-2xl font-semibold"><h1>{blog.title}</h1></p>
-      <div className="text-sm py-1.5">
-        <Moment format="YYYY-MM-DD" className="text-black pr-3 font-semibold">{blog.createdAt}</Moment>
+      <div className="inline-flex text-sm py-1.5">
+        <div className="flex-1 text-black pr-3 font-semibold">{blog.createdAt}</div>
         {blog.tags.map(tag => (
           <div className="inline-flex bg-gray-800 mr-2 px-1.5 rounded-md" key={tag.id}>
             <a className="flex-1 text-white font-semibold"><h2>{tag.name}</h2></a>
@@ -94,7 +95,7 @@ export const getStaticProps: GetStaticProps = async context => {
         title: blog.title,
         body: highlightCode(blog.body),
         tags: blog.tags,
-        createdAt: blog.createdAt,
+        createdAt: dayjs(blog.createdAt).format('YYYY-MM-DD'),
         updatedAt: blog.updatedAt,
         publishedAt: blog.publishedAt,
         revisedAt: blog.revisedAt,
