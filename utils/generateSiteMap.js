@@ -8,6 +8,7 @@ async function generateSiteMap() {
     //'!pages/_*.tsx',
     'out/blogs/*.html'
   ])
+  
   console.log("pages", pages)
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
