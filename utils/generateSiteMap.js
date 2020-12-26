@@ -8,21 +8,8 @@ async function generateSiteMap() {
     //'!pages/_*.tsx',
     //'out/blogs/*.html',
     '.next/server/pages/**/*.html',
-  ])
-
-  const testPage = await globby([
-    //'pages/**/*.tsx',
-    //'!pages/**/[id].tsx',
-    //'!pages/_*.tsx',
-    //'out/blogs/*.html',
-    //'.next/*',
-    //'.next/**/',
     '.next/serverless/pages/**/*.html'
   ])
-
-  console.log("testPage", testPage )
-
-  console.log("pages", pages)
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">   
