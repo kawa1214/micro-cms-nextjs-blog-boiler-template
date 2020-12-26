@@ -5,7 +5,6 @@ import { BlogContent } from '../../components/BlogContent';
 import Head from 'next/head'
 
 import { title } from '../../static/general'
-import { GA_TRACKING_ID } from '../../utils/tag'
 import cheerio from 'cheerio';
 import hljs from 'highlight.js'
 import dayjs from 'dayjs'
@@ -22,22 +21,6 @@ const Blog: React.FC<BlogProps> = ({ blog, title }) => {
     <>
     <Head>
       <title>{blog.title} | {title}</title>
-      <script
-          async={true}
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-        />
-      <script
-        dangerouslySetInnerHTML={{
-        __html: `
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', '${GA_TRACKING_ID}', {
-            page_path: window.location.pathname,
-          });
-          `,
-        }}
-      />
     </Head>
     <div className="bg-gray-50 py-4 px-2 md:px-14">
       <p className="text-2xl font-semibold"><h1>{blog.title}</h1></p>

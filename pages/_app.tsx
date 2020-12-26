@@ -29,28 +29,12 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <title>{title}</title>
-        <script
-          async={true}
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-        />
-        <script
-          dangerouslySetInnerHTML={{
-          __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${GA_TRACKING_ID}', {
-              page_path: window.location.pathname,
-            });
-            `,
-          }}
-        />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="Description" content="Web技術のアウトプットや日常的なことまで何でも書きます。Webアプリケーション開発のお仕事もお待ちしております！"></meta>
-        </Head>
-        <Header />
-        <Component {...pageProps} />
-        <Footer />
+      </Head>
+      <Header />
+      <Component {...pageProps} />
+      <Footer />
     </>
   )
 }
