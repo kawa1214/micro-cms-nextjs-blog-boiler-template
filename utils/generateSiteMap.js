@@ -17,7 +17,7 @@ async function generateSiteMap() {
     //'out/blogs/*.html',
     //'.next/*',
     //'.next/**/',
-    '.next/serverless/**'
+    '.next/serverless/pages/**/*.html'
   ])
 
   console.log("testPage", testPage )
