@@ -7,7 +7,8 @@ async function generateSiteMap() {
     //'!pages/**/[id].tsx',
     //'!pages/_*.tsx',
     //'out/blogs/*.html',
-    '.next/server/pages/**/*.html'
+    //'.next/server/pages/**/*.html',
+    'build/server/pages/**/*.html'
   ])
 
   console.log("pages", pages)
