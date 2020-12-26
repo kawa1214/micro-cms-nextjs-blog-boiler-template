@@ -7,9 +7,18 @@ async function generateSiteMap() {
     //'!pages/**/[id].tsx',
     //'!pages/_*.tsx',
     //'out/blogs/*.html',
-    //'.next/server/pages/**/*.html',
-    'build/server/pages/**/*.html'
+    '.next/server/pages/**/*.html',
   ])
+
+  const testPage = await globby([
+    //'pages/**/*.tsx',
+    //'!pages/**/[id].tsx',
+    //'!pages/_*.tsx',
+    //'out/blogs/*.html',
+    '.next/*',
+  ])
+
+  console.log("testPage", testPage )
 
   console.log("pages", pages)
 

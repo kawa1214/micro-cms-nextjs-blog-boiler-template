@@ -2,27 +2,27 @@
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">   
       
       <url>
-        <loc>https://kawa.devbuild/server/pages/404</loc>
+        <loc>https://kawa.dev/404</loc>
       </url>
               
       <url>
-        <loc>https://kawa.devbuild/server/pages</loc>
+        <loc>https://kawa.dev</loc>
       </url>
               
       <url>
-        <loc>https://kawa.devbuild/server/pages/blogs/flutter-markdown</loc>
+        <loc>https://kawa.dev/blogs/flutter-markdown</loc>
       </url>
               
       <url>
-        <loc>https://kawa.devbuild/server/pages/blogs/flutter-state-notifier-firestore</loc>
+        <loc>https://kawa.dev/blogs/flutter-state-notifier-firestore</loc>
       </url>
               
       <url>
-        <loc>https://kawa.devbuild/server/pages/blogs/jest-axios-mock</loc>
+        <loc>https://kawa.dev/blogs/jest-axios-mock</loc>
       </url>
               
       <url>
-        <loc>https://kawa.devbuild/server/pages/blogs/learn-virtual-dom</loc>
+        <loc>https://kawa.dev/blogs/learn-virtual-dom</loc>
       </url>
               
   </urlset>

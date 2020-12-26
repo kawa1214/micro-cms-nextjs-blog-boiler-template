@@ -8,5 +8,4 @@ module.exports = {
   images: {
     domains: ['images.microcms-assets.io'],
   },
-  distDir: 'build',
 }
