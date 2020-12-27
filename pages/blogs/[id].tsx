@@ -3,7 +3,6 @@ import { GetStaticProps, GetStaticPaths, GetServerSideProps } from 'next'
 import { BlogType } from '../../types'
 import { BlogContent } from '../../components/BlogContent';
 import Head from 'next/head'
-
 import { title } from '../../static/general'
 import cheerio from 'cheerio';
 import hljs from 'highlight.js'
@@ -12,11 +11,10 @@ import dayjs from 'dayjs'
 
 type BlogProps = {
   blog: BlogType
-  title: string
   tableOfContent: string
 }
 
-const Blog: React.FC<BlogProps> = ({ blog, title, tableOfContent }) => {
+const Blog: React.FC<BlogProps> = ({ blog, tableOfContent }) => {
 
   return (
     <>
@@ -96,7 +94,6 @@ export const getStaticProps: GetStaticProps = async context => {
         revisedAt: blog.revisedAt,
         featured: blog.featured,
       },
-      title: title,
       tableOfContent: tableOfCOntent,
     },
   };
