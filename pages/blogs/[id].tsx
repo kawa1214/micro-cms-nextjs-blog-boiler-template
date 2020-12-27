@@ -12,27 +12,19 @@ import dayjs from 'dayjs'
 
 type BlogProps = {
   blog: BlogType
-  title: String
+  title: string
+  tableOfContent: string
 }
 
-const Blog: React.FC<BlogProps> = ({ blog, title }) => {
+const Blog: React.FC<BlogProps> = ({ blog, title, tableOfContent }) => {
 
   return (
     <>
     <Head>
       <title>{blog.title} | {title}</title>
     </Head>
-    <div className="bg-gray-50 py-4 px-2 md:px-14">
-      <p className="text-2xl font-semibold"><h1>{blog.title}</h1></p>
-      <div className="inline-flex text-sm py-1.5">
-        <div className="flex-1 text-black pr-3 font-semibold">{blog.createdAt}</div>
-        {blog.tags.map(tag => (
-          <div className="inline-flex bg-gray-800 mr-2 px-1.5 rounded-md" key={tag.id}>
-            <a className="flex-1 text-white font-semibold"><h2>{tag.name}</h2></a>
-          </div>
-        ))}
-      </div>
-      <BlogContent blog={blog} />
+    <div className="bg-gray-50 py-4 px-2 md:px-14 md:flex md:justify-center">
+      <BlogContent blog={blog} tableOfContent={tableOfContent} />
     </div>
     </>
   );
@@ -63,6 +55,24 @@ export const getStaticProps: GetStaticProps = async context => {
     return $.html()
   }
 
+  const generateTableOfContent = (body: string) => {
+    const $ = cheerio.load(body,{ decodeEntities: false })
+    let generateHtml = ''
+    generateHtml = generateHtml + '<ul>'
+    $('h2, h3').each((index, elm) => {
+      const text = $(elm).html()
+      const tag = $(elm)[0].name
+
+      const refId = $(elm)[0].attribs.id
+      generateHtml = generateHtml + 
+      `<li class="toc_${tag}" key=${index}>`+
+      `  <a href="#${refId}">${text}</a>`+
+      '</li>'
+    })
+    generateHtml = generateHtml + '</ul>'
+    return generateHtml
+  }
+
   const id = context.params.id;
   const key = {
     headers: { 'X-API-KEY': process.env.API_KEY },
@@ -71,6 +81,8 @@ export const getStaticProps: GetStaticProps = async context => {
   const res = await fetch(process.env.ENDPOINT + '/blogs/' + id, key);
   const blog: BlogType  = await res.json();
 
+  const tableOfCOntent: string = generateTableOfContent(blog.body)
+  
   return {
     props: {
       blog:{
@@ -85,6 +97,7 @@ export const getStaticProps: GetStaticProps = async context => {
         featured: blog.featured,
       },
       title: title,
+      tableOfContent: tableOfCOntent,
     },
   };
 };

@@ -7,15 +7,14 @@
 - 🤖 GoogleAnalytics
 - 📖 Pagination
 - 🖼 Featured image
+- ☪ Lazyload images
+- 🛴 Scrollable table of contents
+
 
 
 ### 🚀 Upcoming Features
 - [ ] Tag Page
-- [ ] Scrollable table of contents
-- [ ] Featured image
 - [ ] Dark mode
-- [ ] Lazyload images
-- [ ] Automatic image preview and optimization
 
 ### Getting started
 

@@ -40,7 +40,7 @@ export const getStaticProps: GetStaticProps = async () => {
   })
   return {
     props: {
-      blogs: blogs,
+      blogs: fotmatDateBlogs,
     },
   };
 };

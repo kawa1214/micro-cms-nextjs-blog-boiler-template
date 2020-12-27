@@ -1,3 +1,5 @@
+@tailwind base;
+@tailwind components;
 
 #blog_content h2 {
   font-size: 26px;
@@ -44,6 +46,37 @@
 #blog_content strong {
   font-weight: 600;
 }
+
+
+/* blog table of content*/
+#blog_toc ul {
+  @apply bg-white rounded px-2 py-2;
+}
+
+#blog_toc li {
+  @apply ml-4 my-1.5;
+}
+
+#blog_toc a:link {
+  @apply text-gray-900;
+}
+
+#blog_toc a:visited {
+  @apply text-gray-900;
+}
+
+#blog_toc a:hover {
+  color: #4C74B9;
+}
+
+#blog_toc a:active {
+  color: #4C74B9;
+}
+
+#blog_toc .toc_h3 {
+  @apply pl-4
+}
+
 
 /* https://highlightjs.org/static/demo/styles/an-old-hope.css */
 
