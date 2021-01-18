@@ -93,6 +93,7 @@ export const getStaticProps: GetStaticProps = async context => {
         publishedAt: blog.publishedAt,
         revisedAt: blog.revisedAt,
         featured: blog.featured,
+        icon: blog.icon ?? '',
       },
       tableOfContent: tableOfCOntent,
     },

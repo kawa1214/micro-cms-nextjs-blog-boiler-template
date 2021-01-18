@@ -12,7 +12,7 @@ type HomeProps = {
  
 const Home: React.FC<HomeProps> = ({blogs}) => {
   return (
-    <div className="flex justify-center bg-gray-50 px-3 md:px-0 md:py-20">
+    <div className="flex justify-center bg-gray-50 px-3 md:px-10 md:py-20">
       <div className="bg-gray-50 max-w-7xl md:grid md:grid-cols-3 md:gap-x-14 md:gap-y-8">
         {blogs.map(blog => (
           <BlogCard blog={blog} key={blog.id}/>

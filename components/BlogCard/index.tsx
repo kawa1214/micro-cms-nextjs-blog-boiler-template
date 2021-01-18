@@ -10,28 +10,23 @@ type BlogCardProps = {
 export const BlogCard: React.FC<BlogCardProps> = ({ blog }) => {
   return(
     <div className="py-4">
-      <Link href={`/blogs/${blog.id}`}>
-        <a><Image
-          className={`object-fill rounded-lg transition duration-500 ease-in-out md:transform hover:scale-105`}
-          width={960}
-          height={530}
-          src={blog.featured.url}
-          alt={blog.title}
-        /></a>
-      </Link>
-      <div className="text-sm py-1.5 md:py-4">
+        <div className="flex items-center">
+          <Link href={`/blogs/${blog.id}`}>
+            <a className="bg-gradient-to-r from-purple-400 via-pink-500 justify-self-center to-red-500 h-12 w-12 rounded-lg">{blog.icon}</a>
+          </Link>
+          <Link href={`/blogs/${blog.id}`}>
+            <a className="text-lg font-semibold">{blog.title}</a>
+          </Link>
+        </div>
+      <div className="text-sm py-1.5 md:py-4 inline-flex">
         {blog.tags.map(tag => (
-          <div className="inline-flex bg-gray-800 mr-2 px-1.5 rounded-md" key={tag.id}>
+          <div className=" bg-gray-800 mr-2 px-1.5 rounded-md" key={tag.id}>
             <h2 className="flex-1 text-white font-semibold">{tag.name}</h2>
           </div>
         ))}
-      </div>
-      <Link href={`/blogs/${blog.id}`}>
-        <a className="text-lg font-semibold"><h1>{blog.title}</h1></a>
-      </Link>
-      <div className="text-sm grid justify-items-end">
         <div className="text-gray-700 pr-3 font-semibold">{blog.createdAt}</div>
       </div>
+      
     </div>
   )
 }

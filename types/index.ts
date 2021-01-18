@@ -17,6 +17,7 @@ type BlogType = {
   publishedAt: Date
   revisedAt: Date
   featured: FeaturedType
+  icon: string
 }
 
 type FeaturedType = {
