@@ -12,8 +12,8 @@ type HomeProps = {
  
 const Home: React.FC<HomeProps> = ({blogs}) => {
   return (
-    <div className="flex justify-center bg-gray-50 px-3 md:px-10 md:py-20">
-      <div className="bg-gray-50 max-w-7xl md:grid md:grid-cols-3 md:gap-x-14 md:gap-y-8">
+    <div className="flex justify-center bg-gray-700 px-3 md:px-10 md:py-20">
+      <div className="max-w-7xl md:grid md:grid-cols-3 md:gap-x-14 md:gap-y-8">
         {blogs.map(blog => (
           <BlogCard blog={blog} key={blog.id}/>
         ))}
@@ -28,11 +28,11 @@ export const getStaticProps: GetStaticProps = async () => {
   const limit = 10
   const key = {
     headers: {'X-API-KEY': process.env.API_KEY},
-  };
+  }
 
-  const res = await fetch(process.env.ENDPOINT + '/blogs?' + `limit=${limit}`, key);
+  const res = await fetch(process.env.ENDPOINT + '/blogs?' + `limit=${limit}`, key)
 
-  const data = await res.json();
+  const data = await res.json()
   const blogs: Array<BlogType> = data.contents
   const fotmatDateBlogs: Array<BlogType> = blogs.map((blog) => {
     blog.createdAt = dayjs(blog.createdAt).format('YYYY-MM-DD')

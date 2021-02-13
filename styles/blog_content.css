@@ -2,10 +2,13 @@
 @tailwind components;
 
 #blog_content h2 {
+  @apply text-2xl font-semibold py-4;
+  /*
   font-size: 26px;
   font-weight: 600;
   padding-top: 2.5px;
   padding-bottom: 2.5px;
+  */
 }
 
 #blog_content h3 {
