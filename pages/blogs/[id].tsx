@@ -15,13 +15,12 @@ type BlogProps = {
 }
 
 const Blog: React.FC<BlogProps> = ({ blog, tableOfContent }) => {
-
   return (
     <>
     <Head>
       <title>{blog.title} | {title}</title>
     </Head>
-    <div className="bg-gray-50 py-4 px-2 md:px-14 md:flex md:justify-center">
+    <div className="bg-gray-700 py-4 px-2 md:px-14 md:flex md:justify-center">
       <BlogContent blog={blog} tableOfContent={tableOfContent} />
     </div>
     </>
@@ -92,8 +91,7 @@ export const getStaticProps: GetStaticProps = async context => {
         updatedAt: blog.updatedAt,
         publishedAt: blog.publishedAt,
         revisedAt: blog.revisedAt,
-        featured: blog.featured,
-        icon: blog.icon ?? '',
+        icon: blog.icon ?? '🥳',
       },
       tableOfContent: tableOfCOntent,
     },

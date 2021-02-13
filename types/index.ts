@@ -16,12 +16,8 @@ type BlogType = {
   updatedAt: Date
   publishedAt: Date
   revisedAt: Date
-  featured: FeaturedType
   icon: string
 }
 
-type FeaturedType = {
-  url: string
-}
 
-export type {BlogType, TagType, FeaturedType}
+export type {BlogType, TagType}
