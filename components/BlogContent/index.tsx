@@ -26,7 +26,7 @@ export const BlogContent: React.FC<BlogContentProps> = ({ blog, tableOfContent }
           <div className="inline-flex text-sm pt-2 pb-6">
             {blog.tags.map(tag => (
               <div className="inline-flex bg-gray-800 mr-2 px-1.5 rounded-md" key={tag.id}>
-                <a className="flex-1 text-white font-semibold"><h2 className="text-sm">{tag.name}</h2></a>
+                <p className="flex-1 text-white font-semibold"><h2 className="text-sm">{tag.name}</h2></p>
               </div>
             ))}
           </div>
