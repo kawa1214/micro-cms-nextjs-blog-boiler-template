@@ -20,7 +20,7 @@ const Blog: React.FC<BlogProps> = ({ blog, tableOfContent }) => {
     <Head>
       <title>{blog.title} | {title}</title>
     </Head>
-    <div className="bg-gray-700 py-4 px-2 md:px-14 md:flex md:justify-center">
+    <div className="bg-gray-700 md:py-4 md:px-14 md:flex md:justify-center">
       <BlogContent blog={blog} tableOfContent={tableOfContent} />
     </div>
     </>
