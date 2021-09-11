@@ -18,6 +18,24 @@
 
 ### Getting started
 
+#### micro cms API構成
+
+blogs
+
+|  FieldId  |  表示名  |   種類  |   必須項目  |
+| ---- | ---- |　 ---- |　 ---- |　
+|  title  |  タイトル  |  テキストフィールド  |  true  |
+|  icon  |  絵文字のアイコン  |  テキストフィールド  |  true  |
+|  body  |  内容  |  リッチエディタ  |  true  |
+|  tags  |  タグ  |  複数コンテンツ参照  |  false  |
+
+
+tags
+
+|  FieldId  |  表示名  |   種類  |   必須項目  |
+| ---- | ---- |　 ---- |　 ---- |　
+|  name  |  タグ名  |  テキストフィールド  |  true  |
+
 .env.development.local
 ```
 API_KEY=xxxx-xxxx-xxxx-xxxx
